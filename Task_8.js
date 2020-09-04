@@ -20,7 +20,7 @@ function SelectThrees(digit){
              arrayOfThrees.push(x);
 
 
-             textDigit /= 10;
+             textDigit = Math.floor(textDigit/10);
         }
     }
 
