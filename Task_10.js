@@ -5,7 +5,7 @@ let text = "google";
 function CharacterCount(word){
     //Declaring variables
     let stringArray = [];
-    sum = [0];
+    sum = [0], charCount = [];
     counter = 1; // Initializing the Counter
 
     //Splitng the text into parts of an array
@@ -27,7 +27,7 @@ function CharacterCount(word){
         
         //re-Initializing the counter and pushing the results into an array
         sum.push(counter);
-        sum.push(startString);
+        charCount.push(startString);
         counter = 1;
         
     }
@@ -38,13 +38,13 @@ function CharacterCount(word){
         if (sum[n] > max)
             max = sum[n]
     }
-
+    
 
     // pushing the results with the highest occurence into another array
     for (var n = 0; n < sum.length; n++){
         if (sum[n] === max ){
             maxArray.push(sum[n]);
-            maxArray.push(sum[n+1]);
+            maxArray.push(charCount[n-1]);
         }
     }
 
@@ -56,4 +56,3 @@ function CharacterCount(word){
 let count = CharacterCount(text);
 count.reverse();
 console.log(count);
-    
