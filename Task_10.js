@@ -43,7 +43,6 @@ function CharacterCount(word){
     // pushing the results with the highest occurence into another array
     for (var n = 0; n < sum.length; n++){
         if (sum[n] === max ){
-            maxArray.push(sum[n]);
             maxArray.push(charCount[n-1]);
         }
     }
